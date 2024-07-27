@@ -11,3 +11,6 @@ function load_assets() {
     wp_enqueue_script("mainscrip",get_theme_file_uri("/build/index.js"),array('jquery'),1.0,true);//array('jquery') xác định rằng file này phụ thuộc vào jQuery.
 }
 add_action("wp_enqueue_scripts","load_assets");
+// Hooks là các điểm móc cho phép bạn gắn thêm chức năng tùy chỉnh vào các điểm khác nhau trong quá trình chạy của WordPress mà không cần chỉnh sửa lõi của WordPress. Có hai loại hooks chính:
+// Actions: Cho phép bạn thêm các chức năng.
+// Filters: Cho phép bạn thay đổi dữ liệu.

@@ -1,1 +1,25 @@
-Helo 
+Bước 1: Vào Laragon vào một cái wordpress mới, sau đó chạy cái project đó lên rồi đăng nhập vào
+Bước 2: Vào thư mục gốc (root) sau đó tìm tên project của mình vừa đặt
+Bước 3: Vào C:\laragon\www\Demo(đây là tên project đã đặt trước đó)\wp-content\themes . Tại ví trí này tạo một folder mới
+Bước 4: Tại thư mục mới vừa vào mở cmd lên để vào vscode (chạy lệnh code .). 
+Bước 5: Tạo các file cần thiết (front-page.php, footer.php, header.php, functions.php, index.php, Ảnh đại diện cho theme)
+Bước 6: Mở cái file index của cái project gốc (project mà muốn đẩy lên wordpress) sau đó mở dưới dạng nodepath rồi copy source dán vào front-page
+Bước 7: Cắt(cut) theo từng đoạn rồi đưa vào lần lượt: header.php, footer.php
+Bước 8: Trong file front-page.php thêm <?php get_header()?> và <?php get_footer()?>
+Nếu tại bước này nó báo lỗi không hiểu 2 hàm trên của wordpress do <?php get_header()?> và <?php get_footer()?> ngoài ngữ cảnh của 
+một theme WordPress hoặc khi WordPress chưa được tải đúng cách.
+    Sửa như sau
+    8.1: Kiểm tra xem PHP đã được cài chưa
+    8.2: thêm wordpress đến php.stubs 
+    Tải về tệp tin stubs của WordPress:
+    - Tải về tệp tin stubs của WordPress từ GitHub hoặc một nguồn khác: git clone https://github.com/szepeviktor/phpstan-wordpress.git
+    Cấu hình Intelephense để sử dụng các tệp tin stubs:
+    "intelephense.stubs": [
+        "wordpress",
+        "path/to/your/php-stubs/wordpress-stubs" ("C:/.../phpstan-wordpress") nơi chứa phpstan . Thường thì nó cùng cấp với các file trong project này
+    ],
+    Khởi động lại vscode để chạy lại
+Bước 9: Để có thể tải được file css, jsm, scss thì cần phải tạo một cái file functions để liên kết lại
+
+
+Xin cảm onwnn !!!
